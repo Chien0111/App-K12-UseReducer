@@ -2,11 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Test from "./test";
 import Home from "./home";
 import Layout from "./layout";
-import { useEffect } from "react";
 
 const App = () => {
-  useEffect(() => {
-  });
   return (
     <div className="App">
       <Routes>
@@ -19,24 +16,29 @@ const App = () => {
   );
 };
 
-// cai dat thu vien router: npm i -D react-router-dom
-
-// config
-// <BrowserRouter> // boc cac component vao router
-
-// <Routes> // boc nhieu router voi nhau
-
-// <Route path="duong link dan den component" element={component}/>
-
-// </Routes>
-
-// </BrowserRouter>
-
-// viet component layout
-// boc tat ca route thanh 1 route chinh va co chung component layout
-
-// hook trong react
-
-// useState
-
 export default App;
+
+// useReducer => redux
+// redux: quan state cho toan du an, state global
+// react - thu vien - libarly
+// npm i redux react-redux
+
+// dung redux vao project
+// file index: boc component chinh vao provider truyen store
+// store: khoi tao ra store cho du an
+// reducer: login de cap nhat lai state global
+// action: cac action de gui den reducer
+
+// useSelector : lay state ra
+// useDispatch: lay function action
+
+// react: useEffect, useState
+// redux: useState = global
+
+// cau truc du an
+// hook
+// thu vien:
+// + UI: antsdesign, mater, mui
+// + CSS: tailwin
+// + API: axios
+// + state: redux
