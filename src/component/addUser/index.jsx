@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Button, Modal, Input } from "@mantine/core";
 
-const AddUser = ( props ) => {
-  const { openAdd, setOpenAdd } = props;
+const AddUser = (props) => {
+  const { openAdd, setOpenAdd, elements, setElements,setCloneElements } = props;
   const [position, setPosition] = useState("");
   const [name, setName] = useState("");
   const [symbol, setSymbol] = useState("");
@@ -15,8 +15,15 @@ const AddUser = ( props ) => {
       symbol,
       mass,
     };
-    console.log(data);
+    setCloneElements([...elements, data])
+    setElements([...elements, data]);
+    setOpenAdd(false);
+    setPosition("");
+    setName("");
+    setSymbol("");
+    setMass("");
   };
+
   return (
     <>
       <Modal
