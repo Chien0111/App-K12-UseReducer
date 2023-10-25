@@ -10,11 +10,6 @@ const App = () => {
   const token = localStorage.getItem("token");
   const navigation = useNavigate();
 
-  const LogOut = () => {
-    navigation("/login");
-    localStorage.removeItem("token");
-  };
-
   useEffect(() => {
     if (!token) {
       navigation("/login");
