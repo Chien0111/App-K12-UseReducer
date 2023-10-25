@@ -103,9 +103,6 @@ const Test = () => {
     const startPage = (number - 1) * 5;
     const endPage = startPage + 5;
     const newElement = cloneElements.slice(startPage, endPage);
-    console.log("startPage", startPage);
-    console.log("endPage", endPage);
-    console.log("newElement:", newElement);
     setElements(newElement);
   };
 
